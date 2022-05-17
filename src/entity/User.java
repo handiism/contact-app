@@ -3,6 +3,8 @@ package entity;
 public class User extends Contact {
   private String password;
 
+  public User() {}
+
   public User(String name, String password) {
     this.setName(name);
     this.password = password;
