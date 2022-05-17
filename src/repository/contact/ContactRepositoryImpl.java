@@ -8,8 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+// import java.util.logging.Level;
+// import java.util.logging.Logger;
 
 public class ContactRepositoryImpl implements ContactRepository {
   private Connection connection;
@@ -46,8 +46,8 @@ public class ContactRepositoryImpl implements ContactRepository {
       }
       return contact;
     } catch (SQLException e) {
-      Logger.getLogger(ContactRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, e);
+      // Logger.getLogger(ContactRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, e);
       return null;
     }
   }
@@ -67,8 +67,8 @@ public class ContactRepositoryImpl implements ContactRepository {
       }
       return null;
     } catch (SQLException ex) {
-      Logger.getLogger(ContactRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, ex);
+      // Logger.getLogger(ContactRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, ex);
       return null;
     }
   }
@@ -90,8 +90,8 @@ public class ContactRepositoryImpl implements ContactRepository {
       // contact
       return contact.isEmpty() ? null : contact;
     } catch (SQLException ex) {
-      Logger.getLogger(ContactRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, ex);
+      // Logger.getLogger(ContactRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, ex);
       return null;
     }
   }
@@ -108,8 +108,8 @@ public class ContactRepositoryImpl implements ContactRepository {
       preparedStatement.setInt(4, user.getId());
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
-      Logger.getLogger(ContactRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, e);
+      // Logger.getLogger(ContactRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, e);
     }
   }
 
@@ -122,8 +122,8 @@ public class ContactRepositoryImpl implements ContactRepository {
       preparedStatement.setInt(2, user.getId());
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
-      Logger.getLogger(ContactRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, e);
+      // Logger.getLogger(ContactRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, e);
     }
   }
 }

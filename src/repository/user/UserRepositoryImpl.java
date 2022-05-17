@@ -4,8 +4,8 @@ import entity.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+// import java.util.logging.Level;
+// import java.util.logging.Logger;
 
 public class UserRepositoryImpl implements UserRepository {
   private Connection connection;
@@ -30,8 +30,8 @@ public class UserRepositoryImpl implements UserRepository {
       }
       return false;
     } catch (Exception e) {
-      Logger.getLogger(UserRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, e);
+      // Logger.getLogger(UserRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, e);
       return false;
     }
   }
@@ -50,8 +50,8 @@ public class UserRepositoryImpl implements UserRepository {
                         resultSet.getString(3), resultSet.getString(4));
       }
     } catch (Exception e) {
-      Logger.getLogger(UserRepositoryImpl.class.getName())
-          .log(Level.SEVERE, null, e);
+      // Logger.getLogger(UserRepositoryImpl.class.getName())
+      //     .log(Level.SEVERE, null, e);
     }
     return null;
   }
