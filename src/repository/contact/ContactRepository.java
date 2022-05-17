@@ -1,4 +1,4 @@
-package repository;
+package repository.contact;
 
 import entity.Contact;
 import java.util.List;
