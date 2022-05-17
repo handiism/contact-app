@@ -7,7 +7,7 @@ public class MySQL {
 
   private static final String DRIVER = "jdbc:mysql";
   private static final String HOSTNAME = "localhost";
-  private static final String DATABASE = "notesapp";
+  private static final String DATABASE = "contact_app";
   private static final String PORT = "3306";
   private static final String USERNAME = "root";
   private static final String PASSWORD = "";
@@ -19,8 +19,6 @@ public class MySQL {
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
       connection = DriverManager.getConnection(url, USERNAME, PASSWORD);
-      System.out.println(connection.getClientInfo());
-      System.out.println("Success");
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
