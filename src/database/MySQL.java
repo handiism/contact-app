@@ -20,7 +20,7 @@ public class MySQL {
       Class.forName("com.mysql.cj.jdbc.Driver");
       connection = DriverManager.getConnection(url, USERNAME, PASSWORD);
     } catch (Exception e) {
-      System.out.println(e.getMessage());
+      System.out.println(e);
     }
   }
 

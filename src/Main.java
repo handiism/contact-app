@@ -123,9 +123,13 @@ public class Main {
               System.out.println("------------");
               System.out.format("%-4s%-20s%-13s\n", "ID", "Nama", "Nomor HP");
               List<Contact> contacts = contactRepository.readAll();
-              for (Contact c : contacts) {
-                System.out.format("%-4d%-20s%-13s\n", c.getId(), c.getName(),
-                                  c.getPhone());
+              if (contacts.isEmpty()) {
+                System.out.format("%-4s%-20s%-13s\n", "-", "-", "-");
+              } else {
+                for (Contact c : contacts) {
+                  System.out.format("%-4d%-20s%-13s\n", c.getId(), c.getName(),
+                          c.getPhone());
+                }
               }
               System.out.println("-------------------------------");
               System.out.print("Kembali ke menu kontak? (y/n) : ");

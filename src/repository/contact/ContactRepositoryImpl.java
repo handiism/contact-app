@@ -88,7 +88,7 @@ public class ContactRepositoryImpl implements ContactRepository {
       }
       // jika contact.isEmpty() bener maka return null, jika salah maka return
       // contact
-      return contact.isEmpty() ? null : contact;
+      return contact;
     } catch (SQLException ex) {
       // Logger.getLogger(ContactRepositoryImpl.class.getName())
       //     .log(Level.SEVERE, null, ex);
